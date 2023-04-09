@@ -1,0 +1,16 @@
+version: '3' 
+services: 
+  admin-web:
+    container_name: nusa-customer-dashboard 
+    image: 513310362758.dkr.ecr.ap-southeast-1.amazonaws.com/nusalogistics/customer-dashboard:dev
+    environment:
+      VITE_BASE_URL: http://localhost:8080/webserv
+      VITE_CLIENT_ID: cd2798d71f1047198bfdb0f3e21a960f
+      VITE_SECRET: 90f7b9a11836419fbfb10dd49a41dbd5
+    ports:
+      - 3001:3001
+
+# networks: 
+#   default: 
+#     external: 
+#       name: nusa-network
